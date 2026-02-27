@@ -33,7 +33,6 @@
 
     .favorites-list.is-expanded {
         transform: translateY(0);
-        background: red;
     }
 
     .favorites-drawer-handle {
