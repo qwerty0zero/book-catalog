@@ -21,14 +21,12 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         z-index: 1001;
-
-        padding: 0 32px;
-
+        padding: 0;
+        display: flex;
+        flex-direction: column;
         max-height: 85vh;
         transform: translateY(calc(100% - 60px));
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: flex;
-        flex-direction: column;
         border-top: 1px solid var(--color-border);
     }
 
@@ -38,16 +36,25 @@
 
     .favorites-drawer-handle {
         height: 60px;
-        padding: 20px;
+        flex-shrink: 0;
+        padding: 0 32px;
         margin-bottom: 0;
         cursor: pointer;
         display: flex;
         align-items: center;
-        position: sticky;
-        top: 0;
-        background-color: var(--color-surface);
-        z-index: 2;
         user-select: none;
+    }
+
+    .favorites-drawer-content {
+        padding: 0 32px 20px 32px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .favorites-list .book-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 
     .favorites-chevron {
