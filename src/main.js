@@ -53,12 +53,23 @@ function initScrollArrows() {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
-        // Block up button if already at top
         upBtn.disabled = scrollTop <= 0;
-
-        // Block down button if already at bottom 
-        // using a 5px threshold to deal with subpixel rendering bugs
         downBtn.disabled = scrollTop >= maxScroll - 5;
     }, { passive: true });
 }
 initScrollArrows();
+
+/** Initialize Mobile Favorites Drawer logic */
+function initMobileDrawer() {
+    const handle = $('#favorites-drawer-handle');
+    const drawer = $('#favorites-drawer');
+
+    if (handle && drawer) {
+        handle.addEventListener('click', () => {
+            if (window.innerWidth <= 760) {
+                drawer.classList.toggle('is-expanded');
+            }
+        });
+    }
+}
+initMobileDrawer();

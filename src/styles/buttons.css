@@ -93,17 +93,17 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: var(--color-surface);
+    background-color: #d3e4dc;
     color: var(--color-primary);
     box-shadow: var(--shadow-card);
     transition: all var(--transition);
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .scroll-arrow:hover:not(:disabled) {
     opacity: 1;
     transform: translateY(-2px);
-    background-color: var(--color-surface-2);
+    background-color: var(--color-primary-light-hover);
 }
 
 .scroll-arrow:active:not(:disabled) {
@@ -116,10 +116,11 @@
     background-color: var(--color-surface);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .scroll-arrows {
         right: 16px;
-        bottom: 16px;
+        bottom: 75px;
+        flex-direction: row;
     }
 
     .scroll-arrow {
