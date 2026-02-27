@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Catalog</title>
+    <meta name="description" content="Discover and save your favorite books in our catalog." />
+
+    <!-- Favicons -->
+    <link rel="icon" href="./public/assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="./public/assets/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="./public/assets/favicon/favicon-180x180.png" sizes="180x180">
+
+    <!-- Meta tags -->
+    <meta name="theme-color" content="#285541">
+
+    <!-- Open Graph (для Telegram, WhatsApp, Facebook, VK и тд) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Book Catalog" />
+    <meta property="og:description" content="Discover and save your favorite books in our catalog." />
+    <meta property="og:image" content="./public/assets/og-image.jpg" />
+
+    <!-- Twitter Cards (для X / Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Book Catalog" />
+    <meta name="twitter:description" content="Discover and save your favorite books in our catalog." />
+    <meta property="og:image" content="./public/assets/og-image.jpg" />
+
+    <link rel="stylesheet" href="/src/styles/all.css" />
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__inner">
+                <h1 class="header__title">
+                    <img src="/assets/icons/book-open.svg" alt="Book" class="header__logo " />
+                    Book Catalog
+                </h1>
+                <div class="header__controls"></div>
+            </div>
+        </header>
+
+        <main class="main">
+            <!--SEARCH BAR-->
+            <div class="search-bar">
+                <div class="search-bar__input-wrap">
+                    <img src="/assets/icons/search.svg" alt="" class="search-bar__icon" aria-hidden="true" />
+                    <input type="text" id="search-input" class="search-bar__input"
+                        placeholder="Title, author, or keyword..." aria-label="Search books" autocomplete="off" />
+                </div>
+
+                <select id="author-filter" class="search-bar__filter" aria-label="Filter by author">
+                    <option value="">All Authors</option>
+                </select>
+
+                <button id="search-btn" class="btn btn--primary">Search</button>
+            </div>
+
+            <!-- State messages -->
+            <div class="state-message" id="state-message" role="status" aria-live="polite"></div>
+
+            <!-- Results grids -->
+            <div class="book-colection">
+                <section class="result-list">
+                    <h2 class="section-title">Popular Books</h2>
+                    <div class="book-grid" id="results-grid" aria-label="Search results / Popular books"></div>
+                    <div id="scroll-sentinel" style="height: 1px; width: 100%;"></div>
+                </section>
+
+
+                <section class="favorites-list">
+                    <h2 class="section-title"
+                        style=" display: flex; justify-content: space-between; align-items: center;">
+                        Favorites
+                        <span class="nav__badge" id="favorites-count">0</span>
+                    </h2>
+                    <div class="book-flex" id="favorites-grid" aria-label="Favorite books"></div>
+
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scroll Arrows -->
+    <div class="scroll-arrows">
+        <button id="scroll-up-btn" class="btn btn--icon scroll-arrow" aria-label="Scroll Up" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+        <button id="scroll-down-btn" class="btn btn--icon scroll-arrow" aria-label="Scroll Down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

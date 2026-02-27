@@ -1,0 +1,63 @@
+
+/* ----- Main ----- */
+
+#app{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.main {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1600px;
+    width: 100%;
+}
+.book-colection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 20px;
+}
+.result-list{
+    flex: 2;
+    padding: 16px 0;
+}
+.favorites-list{
+    flex: 1;
+    background-color: var(--color-surface);
+    padding: 16px 32px;
+    border-radius: var(--radius);
+    height: fit-content;
+    transition: background-color var(--transition), color var(--transition), height var(--transition);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* ----- State messages ----- */
+
+.state-message {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    padding: 32px 0;
+}
+
+.state-message--error {
+    color: var(--color-danger);
+}
+
+.state-message:empty {
+    display: none;
+}
+
+
+

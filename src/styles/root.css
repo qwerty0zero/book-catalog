@@ -1,0 +1,47 @@
+
+/*root*/
+
+:root {
+    --color-bg: #f5f5f0;
+    --color-surface: #ffffff;
+    --color-surface-2: #f0f0f0;
+    --color-border: #e0e0e0;
+    --color-text: #1a1a1a;
+    --color-text-muted: #666666;
+    --color-primary: #285541;
+    --color-primary-light: rgba(40, 85, 65, 0.1);
+    --color-primary-light-hover: rgba(40, 85, 65, 0.4);
+
+    --color-primary-hover: #2b493a;
+    --color-danger-light: rgba(239, 68, 68, 0.3);
+    --color-danger: #ef4444;
+    --color-danger-hover: #dc2626;
+    --color-star: #f59e0b;
+    --color-star-active: #d97706;
+    --color-white: #ffffff;
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0 6px 20px rgba(0, 0, 0, 0.13);
+    --radius: 10px;
+    --radius-sm: 6px;
+    --transition: 0.2s ease;
+}
+
+body.dark {
+    --color-bg: #1b1b18;
+    --color-surface: #242420;
+    --color-surface-2: #2c2c27;
+    --color-border: #3a3a34;
+
+    --color-text: #f2f2ec;
+    --color-text-muted: #a0a09a;
+
+    --color-primary-light: rgba(40, 85, 65, 0.5);
+    --color-primary-light-hover: rgb(40, 85, 65);
+
+    --color-danger: #f87171;
+    --color-danger-hover: #ef4444;
+    --color-star: #fbbf24;
+    --color-star-active: #f59e0b;
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 6px 20px rgba(0, 0, 0, 0.5);
+}

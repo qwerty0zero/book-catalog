@@ -1,0 +1,129 @@
+/* ----- Buttons ----- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color var(--transition), color var(--transition), transform 0.1s;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn--danger {
+    background-color: transparent;
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+    padding: 6px 12px;
+    font-size: 0.82rem;
+}
+
+.btn--danger:hover {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+}
+
+.btn--fav {
+    background-color: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 6px 12px;
+    font-size: 0.82rem;
+}
+
+.btn--fav:hover {
+    border-color: var(--color-star);
+    color: var(--color-star);
+}
+
+.btn--fav.btn--fav-active {
+    background-color: var(--color-star);
+    border-color: var(--color-star);
+    color: var(--color-white);
+}
+
+.btn--icon {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary-light);
+    transition: background-color var(--transition);
+}
+
+.btn--icon:hover {
+    background-color: var(--color-primary-light-hover);
+}
+
+.btn--icon img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ----- Scroll Arrows ----- */
+.scroll-arrows {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.scroll-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition);
+    opacity: 0.8;
+}
+
+.scroll-arrow:hover:not(:disabled) {
+    opacity: 1;
+    transform: translateY(-2px);
+    background-color: var(--color-surface-2);
+}
+
+.scroll-arrow:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.scroll-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+    background-color: var(--color-surface);
+}
+
+@media (max-width: 768px) {
+    .scroll-arrows {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .scroll-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
