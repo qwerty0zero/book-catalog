@@ -33,12 +33,12 @@
     }
 
     .favorites-list.is-expanded {
-        max-height: 90dvh;
+        max-height: 85vh;
     }
 
     .favorites-drawer-handle {
         height: 60px;
-        padding:  20px;
+        padding: 20px;
         margin-bottom: 0;
         cursor: pointer;
         display: flex;
