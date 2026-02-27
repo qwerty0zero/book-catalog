@@ -26,7 +26,6 @@
 
         max-height: 85vh;
         transform: translateY(calc(100% - 60px));
-        overflow: hidden;
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
         flex-direction: column;
@@ -35,7 +34,6 @@
 
     .favorites-list.is-expanded {
         transform: translateY(0);
-        height: fit-content;
     }
 
     .favorites-drawer-handle {
@@ -65,7 +63,7 @@
 
     .favorites-drawer-content {
         flex: 1;
-        overflow-y: auto;
+        overflow-y: scroll;
         padding: 0 20px 20px 20px;
         overscroll-behavior: contain;
     }
